@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(228, 204, 143);
+    background-image: url("Harry-potter-clip-art-2.gif");
+    font-family: 'Bangers', cursive;
+}
+
+.card1 {
+    background-color: darkred;
+}
+
+.card {
+    /*display: none;*/
+    background-color: darkred;
+}
+
+.Slide {
+    /*display: none;*/
+    background-color:rgb(228, 204, 143);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin: 40px;
+    height: 500px; 
+}
+
+#Main-Slide {
+    padding-top: 20px;
+    height: 500px;
+    background-color:rgb(228, 204, 143);
+}
+
+img {
+    border: solid 3px;
+    border-color: darkred;
+}
+
+#countdown-timer {
+    text-align: justify;
+}
+
+#Start:hover {
+background-color: darkred;
+}
+   
