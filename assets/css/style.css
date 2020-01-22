@@ -43,7 +43,20 @@ img {
     text-align: justify;
 }
 
+
+/*button {
+background-color: rgb(228, 204, 143);
+border: none;
+}*/
+
+#Start, #Start-Over {
+   border: solid 3px darkred; 
+} 
+
 #Start:hover {
 background-color: darkred;
 }
-   
+
+#Start-Over:hover {
+    background-color: darkred;
+}

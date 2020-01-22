@@ -4,15 +4,18 @@
 
 //Need to set timer for each question that counts down, display in each slide
 
-userInput = $("#Answer").on("click", function () {
-console.log("userInput");
-});
+//userInput =
+
+
+//$("#Answer").on("click", function () {
+//console.log("userInput");
+//});
 
 
 
 
 var clockRunning = false;
-var time = 45;
+var time = 46;
 var intervalId;
 
 correctAnswers = 0;
@@ -61,10 +64,6 @@ function showSlides() {
     console.log("count");
     var currentSlide = slideIndex;
     console.log(currentSlide);
-
-
-
-
 }
 
 function transitionNewSlide() {
@@ -103,7 +102,64 @@ function timeConverter(t) {
 //reveal image of correct answer when answer correct, time's up, or answer incorrect
 //update correct/incorrect answers
 
-function checkUserAnswers() {
+//if(slideIndex === [0]) {
+    //console.log("hello");
+if ($("#Answer-Choice-1D").on("click", function() {
+    correctAnswers++;
+    console.log("correctAnswers");
+    $(".Message").html("You are correct!");
+    $(".correct-answer-img").html(src='assets/images/harry-potter.jpg');
+})); else ($("#Answer-Choice-1A", "#Answer-Choice-1B", "#Answer-Choice-1C").on("click", function() {
+    incorrectAnswers++;
+    $(".Message").html("The correct answer was D.");
+    $(".correct-answer-img").src = "assets/images/harry-potter.jpg";
+    console.log("img"); 
+}));
+//};
+
+if ($("#Answer-Choice-2B").on("click", function() {
+    correctAnswers++;
+    console.log(correctAnswers);
+    $(".Message").html("You are correct!");
+    $(".correct-answer-img").html(src='assets/images/hermione.jpg');
+})); else /*($("#Answer-Choice-1A", "#Answer-Choice-1B", "#Answer-Choice-1C"))*/ {
+    incorrectAnswers++;
+    $(".Message").html("The correct answer was D.");
+    $(".correct-answer-img").src ="assets/images/hermione.jpg";
+    console.log("img"); 
+};
+
+if ($("#Answer-Choice-3D").on("click", function() {
+    correctAnswers++;
+    console.log(correctAnswers);
+    $(".Message").html("You are correct!");
+    $(".correct-answer-img").append("Lordvoldemort.jpg");
+})); else /*($("#Answer-Choice-1A", "#Answer-Choice-1B", "#Answer-Choice-1C"))*/ {
+    incorrectAnswers++;
+    $(".Message").html("The correct answer was D.");
+    $(".correct-answer-img").src ="assets/images/Lordvoldemort.jpg";
+    console.log("img"); 
+};
+
+
+/*function answers() {
+if (slideIndex === [0]) {
+    if ($("#Answer-Choice-1D").on("click", function() {
+        correctAnswers++;
+        console.log(correctAnswers);
+        $(".Message").html("You are correct!");
+        $(".correct-answer-img").src = "assets/images/harry-potter.jpg";
+    })); else if ($("#Answer-Choice-1A", "#Answer-Choice-1B", "#Answer-Choice-1D")) {
+        incorrectAnswers++;
+        $(".Message").html("The correct answer was D.");
+        $(".correct-answer-img").src = "assets/images/harry-potter.jpg";
+        console.log("img"); 
+    }    
+    }
+};*/
+
+
+/*function checkUserAnswers() {
     if (slideIndex === slides[0]) {
         if (userInput === $("#Answer-Choice-1D")) {
             correctAnswers++;
@@ -199,14 +255,14 @@ function checkUserAnswers() {
         if (userInput === $("#Answer-Choice-10A")) {
             correctAnswers++;
             $(".Message").html("You are correct!");
-            $(".correct-answer-img").src = "assets/images/neville.jpg";
+            $(".correct-answer-img").src="assets/images/neville.jpg";
         } else {
             $(".Message").html("The correct answer was A.");
             $(".correct-answer-img").src = "assets/images/neville.jpg";
             incorrectAnswers++;
         }
-    } 
- }
+    }
+ }*/
  
 //time up function
 //Need to hide time up message in next slide
@@ -233,4 +289,4 @@ function reset() {
     $("incorrect-answers").html("<h2>Incorrect Answers: " + incorrectAnswers + "</h2>");
     $("#Start-Over").on("click", function () {
         reset();
-    });
+    })
