@@ -12,7 +12,7 @@ console.log("userInput");
 
 
 var clockRunning = false;
-var time = 10;
+var time = 45;
 var intervalId;
 
 correctAnswers = 0;
@@ -76,7 +76,7 @@ function count() {
     time--;
     var converted = timeConverter(time);
     //console.log(converted);
-    $("#countdown-timer").html("Time Remaining: " + converted);
+    $(".countdown-timer").html("Time Remaining: " + converted);
 }
 
 function timeConverter(t) {
@@ -105,122 +105,125 @@ function timeConverter(t) {
 
 function checkUserAnswers() {
     if (slideIndex === slides[0]) {
-        if (userInput === $("#Answer Choice 1D")) {
+        if (userInput === $("#Answer-Choice-1D")) {
             correctAnswers++;
-            $("#Message").html("You are correct!");
-            $("#correct-answer-img").src = "assets/images/harry-potter.jpg";
+            $(".Message").html("You are correct!");
+            $(".correct-answer-img").src = "assets/images/harry-potter.jpg";
         } else {
-            $("#Message").html("The correct answer was D.");
-            $("#correct-answer-img").src = "assets/images/harry-potter.jpg";
+            $(".Message").html("The correct answer was D.");
+            $(".correct-answer-img").src = "assets/images/harry-potter.jpg";
             incorrectAnswers++;
             console.log("img");
         }
     } else if (slideIndex === slides[1]) {
-        if (userInput === $("#Answer Choice 2B")) {
+        if (userInput === $("#Answer-Choice-2B")) {
             correctAnswers++;
-            $("#Message").html("You are correct!");
-            $("#correct-answer-img").src = "assets/images/hermoine.jpg";
+            $(".Message").html("You are correct!");
+            $(".correct-answer-img").src ="assets/images/hermoine.jpg";
         } else {
-            $("#Message").html("The correct answer was B.");
-            $("#correct-answer-img").src = "assets/images/hermoine.jpg";
+            $(".Message").html("The correct answer was B.");
+            $(".correct-answer-img").src = "assets/images/hermoine.jpg";
             incorrectAnswers++;
         }
     } else if (slideIndex === slides[2]) {
-        if (userInput === $("#Answer Choice 3D")) {
+        if (userInput === $("#Answer-Choice-3D")) {
             correctAnswers++;
-            $("#Message").html("You are correct!");
-            $("#correct-answer-img").src = "assets/images/Lordvoldemort.jpg";
+            $(".Message").html("You are correct!");
+            $(".correct-answer-img").src = "assets/images/Lordvoldemort.jpg";
         } else {
-            $("#Message").html("The correct answer was D.");
-            $("#correct-answer-img").src = "assets/images/Lordvoldemort.jpg";
+            $(".Message").html("The correct answer was D.");
+            $(".correct-answer-img").src = "assets/images/Lordvoldemort.jpg";
             incorrectAnswers++;
         }
     } else if (slideIndex === slides[3]) {
-        if (userInput === $("#Answer Choice 4A")) {
+        if (userInput === $("#Answer-Choice-4A")) {
             correctAnswers++;
-            $("#Message").html("You are correct!");
+            $(".Message").html("You are correct!");
             $("#correct-answer-img").src = "assets/images/books.jpg";
         } else {
-            $("#Message").html("The correct answer was A.");
-            $("#correct-answer-img").src = "assets/images/books.jpg";
+            $(".Message").html("The correct answer was A.");
+            $(".correct-answer-img").src = "assets/images/books.jpg";
             incorrectAnswers++;
         }
     } else if (slideIndex === slides[4]) {
-        if (userInput === $("#Answer Choice 5B")) {
+        if (userInput === $("#Answer-Choice-5B")) {
             correctAnswers++;
-            $("#Message").html("You are correct!");
-            $("#correct-answer-img").src = "assets/images/hogwarts.jpg";
+            $(".Message").html("You are correct!");
+            $(".correct-answer-img").src = "assets/images/hogwarts.jpg";
         } else {
-            $("#Message").html("The correct answer was B.");
-            $("#correct-answer-img").src = "assets/images/hogwarts.jpg";
+            $(".Message").html("The correct answer was B.");
+            $(".correct-answer-img").src = "assets/images/hogwarts.jpg";
             incorrectAnswers++;
         }
     } else if (slideIndex === slides[5]) {
-        if (userInput === $("#Answer Choice 6D")) {
+        if (userInput === $("#Answer-Choice-6D")) {
             correctAnswers++;
-            $("#Message").html("You are correct!");
-            $("#correct-answer-img").src = "assets/images/Myrtle1.png";
+            $(".Message").html("You are correct!");
+            $(".correct-answer-img").src = "assets/images/Myrtle1.png";
         } else {
-            $("#Message").html("The correct answer was D.");
-            $("#correct-answer-img").src = "assets/images/Myrtle1.png";
+            $(".Message").html("The correct answer was D.");
+            $(".correct-answer-img").src = "assets/images/Myrtle1.png";
             incorrectAnswers++;
         }
     } else if (slideIndex === slides[6]) {
-        if (userInput === $("#Answer Choice 7C")) {
+        if (userInput === $("#Answer-Choice-7C")) {
             correctAnswers++;
-            $("#Message").html("You are correct!");
-            $("#correct-answer-img").src = "assets/images/dumbledore.jpg";
+            $(".Message").html("You are correct!");
+            $(".correct-answer-img").src = "assets/images/dumbledore.jpg";
         } else {
-            $("#Message").html("The correct answer was C.");
-            $("#correct-answer-img").src = "assets/images/dumbledore.jpg";
+            $(".Message").html("The correct answer was C.");
+            $(".correct-answer-img").src = "assets/images/dumbledore.jpg";
             incorrectAnswers++;
         }
     } else if (slideIndex === slides[7]) {
-        if (userInput === $("#Answer Choice 8B")) {
+        if (userInput === $("#Answer-Choice-8B")) {
             correctAnswers++;
-            $("#Message").html("You are correct!");
-            $("#correct-answer-img").src = "assets/images/dobby.jpg";
+            $(".Message").html("You are correct!");
+            $(".correct-answer-img").src = "assets/images/dobby.jpg";
         } else {
-            $("#Message").html("The correct answer was B.");
-            $("#correct-answer-img").src = "assets/images/dobby.jpg";
+            $(".Message").html("The correct answer was B.");
+            $(".correct-answer-img").src = "assets/images/dobby.jpg";
             incorrectAnswers++;
         }
     } else if (slideIndex === slides[8]) {
-        if (userInput === $("#Answer Choice 9A")) {
+        if (userInput === $("#Answer-Choice-9A")) {
             correctAnswers++;
-            $("#Message").html("You are correct!");
-            $("#correct-answer-img").src = "assets/images/yule-ball.jpg";
+            $(".Message").html("You are correct!");
+            $(".correct-answer-img").src = "assets/images/yule-ball.jpg";
         } else {
-            $("#Message").html("The correct answer was A.");
-            $("#correct-answer-img").src = "assets/images/yule-ball.jpg";
+            $(".Message").html("The correct answer was A.");
+            $(".correct-answer-img").src = "assets/images/yule-ball.jpg";
             incorrectAnswers++;
         }
     } else if (slideIndex === slides[9]) {
-        if (userInput === $("#Answer Choice 10A")) {
+        if (userInput === $("#Answer-Choice-10A")) {
             correctAnswers++;
-            $("#Message").html("You are correct!");
-            $("#correct-answer-img").src = "assets/images/neville.jpg";
+            $(".Message").html("You are correct!");
+            $(".correct-answer-img").src = "assets/images/neville.jpg";
         } else {
-            $("#Message").html("The correct answer was A.");
-            $("#correct-answer-img").src = "assets/images/neville.jpg";
+            $(".Message").html("The correct answer was A.");
+            $(".correct-answer-img").src = "assets/images/neville.jpg";
             incorrectAnswers++;
         }
     } 
  }
  
 //time up function
+//Need to hide time up message in next slide
  function handleTimeUp() {
-    $("#Message").html("Time's Up.");
-     setTimeout (showSlides, 3000);
-     showSlides();  
+    $(".Message").html("Time's Up.");
+     setTimeout (showSlides, 5000);
+     showSlides();
+     $(".Message").html("");
 }
 
 //Next slide shows up without user input after correct answer img has been shown
 function reset() {
         time = 45;
         $(".slideshow-container").html("Slide1");
-        $("#countdown-timer").text("<h2>" + "Time Remaining: 00:45" + "</h2>");
+        $(".countdown-timer").text("<h2>" + "Time Remaining: 00:45" + "</h2>");
         start();
+        showSlides();
         count();
     }
 
